@@ -35,8 +35,13 @@ jobs:
           plugin_followup_sections: repositories
           plugin_followup_indepth: yes
           plugin_contributors: yes
+          plugin_contributors_base: main
           plugin_contributors_head: main
+          plugin_contributors_sections: contributors
+          plugin_contributors_contributions: yes
           plugin_activity: yes
+          plugin_activity_skipped: .github, demo-repository
+          plugin_activity_timestamps: yes
           plugin_people: no
           plugin_projects: no
           plugin_stars: no
