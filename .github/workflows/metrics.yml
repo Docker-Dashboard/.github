@@ -1,0 +1,41 @@
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          
+          template: classic
+          base: header, activity, community, repositories, metadata
+          plugin_gists: no
+          plugin_introduction: yes
+          plugin_introduction_title: yes
+          plugin_isocalendar: no
+          plugin_languages: yes
+          plugin_languages_skipped: .github, demo-repository
+          plugin_languages_ignored: css, shell
+          plugin_languages_colors: github
+          plugin_languages_other: yes
+          plugin_languages_indepth: yes
+          plugin_languages_limit: 8
+          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_threshold: 0%
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+          plugin_followup_indepth: yes
+          plugin_contributors: yes
+          plugin_contributors_head: main
+          plugin_people: no
+          plugin_projects: no
+          plugin_stars: no
