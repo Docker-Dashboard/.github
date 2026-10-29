@@ -1,6 +1,7 @@
 <div align="center">
   <h1>Dashboard</h1>
   </br>
+  <p>A custom dashboard for all of your self-hosted apps!</p>
   <h2>Statistics</h2>
   </br>
   <p align="center">
