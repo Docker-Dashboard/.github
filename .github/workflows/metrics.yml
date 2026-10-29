@@ -36,6 +36,7 @@ jobs:
           plugin_followup_indepth: yes
           plugin_contributors: yes
           plugin_contributors_head: main
+          plugin_activity: yes
           plugin_people: no
           plugin_projects: no
           plugin_stars: no
