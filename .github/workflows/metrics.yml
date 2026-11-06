@@ -35,7 +35,9 @@ jobs:
           plugin_followup_sections: repositories
           plugin_followup_indepth: yes
           plugin_activity: yes
-          plugin_activity_skipped: .github, demo-repository
+          plugin_activity_limit: 5
+          plugin_activity_days: 0
+          # plugin_activity_skipped: .github, demo-repository
           plugin_activity_visibility: public
           plugin_activity_filter: all
           plugin_activity_timestamps: yes
